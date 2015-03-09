@@ -10,6 +10,12 @@ class Node():
     })
     self.gps = None
     self.firmware = None
+    self.hardware = None
+    self.autoupdater = None
+    self.gateway = None
+    self.uptime = None
+    self.tx_bytes = 0
+    self.rx_bytes = 0
     self.clientcount = 0
     self.lastseen = 0
     self.firstseen = 0

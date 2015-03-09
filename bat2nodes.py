@@ -57,6 +57,7 @@ if options['aliases']:
 if options['alfred']:
   af = alfred()
   db.import_aliases(af.aliases())
+  db.import_aliases(af.statistics())
 
 db.load_state("state.json")
 

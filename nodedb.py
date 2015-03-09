@@ -226,6 +226,27 @@ class NodeDB:
       if 'firmware' in alias:
         node.firmware = alias['firmware']
 
+      if 'hardware' in alias:
+        node.hardware = alias['hardware']
+
+      if 'autoupdater' in alias:
+        node.autoupdater = alias['autoupdater']
+
+      if 'gateway' in alias:
+          try:
+              node.gateway = self.maybe_node_by_mac((alias['gateway'], )).name
+          except:
+              node.gateway = alias['gateway']
+
+      if 'uptime' in alias:
+        node.uptime = alias['uptime']
+
+      if 'tx_bytes' in alias:
+        node.tx_bytes = alias['tx_bytes']
+
+      if 'rx_bytes' in alias:
+        node.rx_bytes = alias['rx_bytes']
+
       if 'id' in alias:
         node.id = alias['id']
 
